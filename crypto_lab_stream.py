@@ -117,8 +117,9 @@ print("All tests passed!")
 
 # Task 1 Questions (answer below):
 # Q1: Why does XOR decryption use the exact same operation as encryption?
-# A1:
+# A1: Because the XOR logical operation is also its own inverse, applying the same key twice returns the original value
 #
 # Q2: If a 1-bit error occurs in the ciphertext, how many bits of the decrypted
 #     plaintext are affected? Why?
-# A2:
+# A2: It usually affects one full block of decrypted plaintext in CBC mode, or one specific bit in CTR/OFB modes. 
+#     The number of affected bits depends on the block cipher mode, as the mode dictates how the error propagates during decryption.
